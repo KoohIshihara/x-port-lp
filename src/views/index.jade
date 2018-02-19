@@ -1,0 +1,27 @@
+//- index.jade
+extends ./layout
+
+block content
+  app
+  script(src='./scripts/tags.js')
+  script.
+    riot.route('/members/*', function(tagName) {
+      console.log(tagName);
+      // APIからとってくる
+      var content = {
+        name: 'kooh',
+        intro: 'Artist',
+      }
+      riot.mount('content', 'page-members', {content: content});
+      riot.update();
+    })
+    riot.route(function(tagName) {
+      console.log(tagName);
+      tagName = tagName || 'home';
+      //debugger
+      riot.mount('content', tagName, {content: 'content'});
+      riot.update();
+    });
+    riot.route.start(true);
+    
+    var tags = riot.mount('app');
