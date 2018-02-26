@@ -17,7 +17,7 @@ block content
     })
     riot.route(function(tagName) {
       console.log(tagName);
-      tagName = tagName || 'home';
+      tagName = tagName || 'page-top';
       //debugger
       riot.mount('content', tagName, {content: 'content'});
       riot.update();

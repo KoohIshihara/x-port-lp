@@ -1,0 +1,33 @@
+module-footer
+  div.wrap-module.py20
+    p.pb8 主催：慶應義塾大学湘南藤沢キャンパス（SFC）
+    p お問い合わせ：hogehoge@sfc.keio.ac.jp
+    p.copy Copyright © 2018 Hoge Fuga of Hoge. All Rights Reserved.
+
+    
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      background: #EFEFEF;
+      width: 100%;
+      height: 30vh;
+      .wrap-module { 
+        position: relative;
+        width: 92%;
+        height: 100%;
+        max-width: 948px;
+        margin: 0 auto;
+        p {
+          color: #000;
+        }
+        .copy {
+          width: 100%;
+          position: absolute;
+          bottom: 40px;
+          text-align: center;
+        }
+      }
+    }
+
+  script.

@@ -1,0 +1,65 @@
+module-works.py40
+  div.wrap-module
+    item-h2(content='{h2}').mb16
+    div.wrap-works.f.flex-wrap.flex-between
+      item-work(each='{item in works}', content='{item}')
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      background: #fff;
+      .wrap-module { 
+        width: 92%;
+        max-width: 948px;
+        margin: 0 auto;
+        p {
+          color: #fff;
+          letter-spacing: 1px;
+        }
+      }
+    }
+
+  script.
+    this.h2 = {
+      label: '展示作品',
+      color: 'color:#2A45F4; border-color:#2A45F4;',
+    };
+
+    this.works = [
+      {
+        label: '石原作品',
+        src: './img/works/work-test.jpg',
+      },
+      {
+        label: '石原作品',
+        src: './img/works/work-test.jpg',
+      },
+      {
+        label: '石原作品',
+        src: './img/works/work-test.jpg',
+      },
+      {
+        label: '石原作品',
+        src: './img/works/work-test.jpg',
+      },
+      {
+        label: '石原作品',
+        src: './img/works/work-test.jpg',
+      },
+      {
+        label: '石原作品',
+        src: './img/works/work-test.jpg',
+      },
+      {
+        label: '石原作品',
+        src: './img/works/work-test.jpg',
+      },
+      {
+        label: '石原作品',
+        src: './img/works/work-test.jpg',
+      },
+      {
+        label: '石原作品',
+        src: './img/works/work-test.jpg',
+      },
+    ];

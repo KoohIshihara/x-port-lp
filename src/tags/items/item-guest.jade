@@ -1,0 +1,36 @@
+item-guest.s-mr0.mr40.mb20
+  div.wrap-item.f
+    div.wrap-img
+      img(src='{ opts.content.src }')
+    div.wrap-info.ml12
+      div.warp-name.f.fm
+        p.name { opts.content.name }
+      p.about { opts.content.about }
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      .wrap-item {
+        .wrap-img {
+          width: 64px;
+        }
+        .wrap-info {
+          p {
+            color: #FFF;
+            letter-spacing: 1px;
+          }
+          .warp-name {
+            height: 60%;
+            .name {
+              font-size: 16px;
+              font-weight: bold;
+            }
+          }
+          .about {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+  script.

@@ -1,0 +1,33 @@
+module-about.py40
+  div.wrap-module
+    item-h2(content='{h2}').mb16
+    p.mb16 本年度のテーマである「X-port」には2つの意味が込められています。
+    wrap-list
+      item-list(each='{item in lists}' content='{item}')
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      background: #2B45F4;
+      .wrap-module { 
+        width: 92%;
+        max-width: 948px;
+        margin: 0 auto;
+        p {
+          color: #fff;
+          letter-spacing: 1px;
+        }
+      }
+    }
+
+  script.
+
+    this.h2 = {
+      label: 'X-portとは',
+      color: 'color:#fff; border-color:#fff;',
+    } 
+
+    this.lists = [
+      {num: '1', content: '一見バラバラに見えるものが、集う港 (port)としての展示を行う。'},
+      {num: '2', content: '出力 (export) の意の通り、「これまでデザインされてこなかった未知なる領域 = X」の研究成果を出力し、社会との接点を持つ。'},
+    ];

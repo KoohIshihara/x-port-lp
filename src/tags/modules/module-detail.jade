@@ -1,0 +1,56 @@
+module-detail.py40
+  div.wrap-module.py20
+    item-h2(content='{h2}').mb16
+    div.wrap-content
+      item-label-detail(content='日時')
+      p 2018/3/24（土）～ 3/25（日）
+      p 11:00～18:00
+    div.wrap-content
+      item-label-detail(content='会場')
+      p YCC ヨコハマ創造都市センター 3Fイベントスペース
+      p 神奈川県横浜市中区本町6-50-1
+      p みなとみらい線「馬車道駅」1B出口から直結
+      p JR・市営地下鉄「桜木町駅」より徒歩5分  
+    div.wrap-content
+      item-label-detail(content='入場料')
+      p 無料
+    div.wrap-content
+      item-label-detail(content='お問い合わせ')
+      a(href='mailto:x-port@example.com') x-port@example.com
+    div.wrap-content
+      item-label-detail(content='協賛')
+      img(src='./img/cooperation/kooh.jpg')
+    div.wrap-content
+      p マップはまだ実装してないよ
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      background: #fff;
+      .wrap-module { 
+        width: 92%;
+        max-width: 948px;
+        margin: 0 auto;
+        .wrap-content {
+          margin-bottom: 16px;
+          p {
+            color: #2A45F4;
+            letter-spacing: 1px;
+          }
+          a {
+            color: #2A45F4;
+            border-bottom: solid 0.4px;
+          }
+        }
+      }
+    }
+
+  script.
+    this.h2 = {
+      label: '展示会詳細',
+      color: 'color:#2A45F4; border-color:#2A45F4;',
+    };
+
+    this.labels = {
+
+    };

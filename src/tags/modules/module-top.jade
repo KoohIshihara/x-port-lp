@@ -1,0 +1,38 @@
+module-top
+  div.wrap-module
+    div.wrap-labels
+      item-label-top(content='慶應義塾大学SFC')
+      item-label-top(content='X-Designプログラム 合同展示会').mt8
+      h1.my20 X-port
+      item-label-top(content='2018.03.24th(sat) – 25th(sun)')
+
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      .wrap-module {
+        width: 100%;
+        height: 140vh;
+        background-image: url("./img/hiro-pc.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        .wrap-labels {
+          width: 90%;
+          margin: 0 auto;
+          margin-top: 48px;
+          h1 {
+            font-size: 72px;
+            letter-spacing: 4px;
+            color: #2B45F4;
+          }
+        }
+      }
+      @media only screen and (max-width : 600px) {
+        .wrap-module {
+          background-image: url("./img/sp/hiro-top.jpg");
+        }
+      }
+    }
+
+  script.

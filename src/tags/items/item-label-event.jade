@@ -1,0 +1,27 @@
+item-label-event
+  div.wrap-item
+    div.wrap-p
+      p.px4.py1 { opts.content }
+      
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      .wrap-item {
+        .wrap-p {
+          display: inline-block;
+          position: relative;
+          p {
+            display: inline;
+            color: #2A45F4;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            background: linear-gradient(to right, rgba(255,255,255,0) 50%, rgba(255, 255, 255, 1) 50%);
+            background-size: 200%;
+            background-position: -100% 0;
+          }
+        }
+      }
+    }
+
+  script.

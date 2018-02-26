@@ -1,0 +1,60 @@
+module-event.pt40.pb40
+  div.wrap-module
+    item-h2(content='{h2}').mb16
+    div.wrap-events.mt28
+      // sec1
+      item-label-event(content='03.24th (sat)').mb28
+      item-time-event(content='{times[0]}').mb20
+      div.wrap-guests.ml22.mb40
+        item-guest(each='{item in guests1}', content='{item}').mb12
+      // sec2
+      item-label-event(content='03.25th (sun)').mb28
+      item-time-event(content='{times[0]}').mb20
+      div.wrap-guests.ml22.mb40
+        item-guest(each='{item in guests1}', content='{item}').mb12
+      item-time-event(content='{times[0]}').mb20
+      div.wrap-guests.ml22.mb40
+        item-guest(each='{item in guests1}', content='{item}').mb12
+
+
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      background: #2B45F4;
+      .wrap-module { 
+        width: 92%;
+        max-width: 948px;
+        margin: 0 auto;
+        .wrap-events {
+          border-left: solid #fff 0.4px;
+          .wrap-guests {
+            display: flex;
+            flex-wrap: wrap;
+          }
+        }
+      }
+      @media only screen and (max-width : 600px) {
+        .wrap-guests {
+          display: block;
+        } 
+      }
+    }
+
+  script.
+
+    this.h2 = {
+      label: 'トークイベント',
+      color: 'color:#fff; border-color:#fff;',
+    }
+
+    this.times = [
+      { time: '14:00-15:00', label: '研究と作品の“際”' },
+      { time: '14:00-15:00', label: '研究と創職' },
+    ];
+
+    this.guests1 = [
+      { name: '石原航', about: 'すごいひと。とってもえらいひと', src: './img/guests/akira.png'},
+      { name: '石原航', about: 'すごいひと。とってもえらいひと', src: './img/guests/akira.png'},
+      { name: '石原航', about: 'すごいひと。とってもえらいひと', src: './img/guests/akira.png'},
+    ];
