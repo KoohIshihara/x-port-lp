@@ -8,13 +8,19 @@ item-h2
       display: block;
       .wrap-item {
         h2 {
-          font-size: 24px;
+          font-size: 3vw;
           letter-spacing: 2px;
           padding: 0.02em 0.5em;/*上下 左右の余白*/
           background: transparent;/*背景透明に*/
           border-left: solid 5px #2B45F4;/*左線*/
         }
-        
+      }
+      @media only screen and (max-width : 600px) {
+        .wrap-item {
+          h2 {
+            font-size: 24px;
+          }
+        }
       }
     }
 

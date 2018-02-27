@@ -3,14 +3,13 @@ module-detail.py40
     item-h2(content='{h2}').mb16
     div.wrap-content
       item-label-detail(content='日時')
-      p 2018/3/24（土）～ 3/25（日）
+      p 2018.03.24(sat) – 25(sun)
       p 11:00～18:00
     div.wrap-content
       item-label-detail(content='会場')
       p YCC ヨコハマ創造都市センター 3Fイベントスペース
-      p 神奈川県横浜市中区本町6-50-1
-      p みなとみらい線「馬車道駅」1B出口から直結
-      p JR・市営地下鉄「桜木町駅」より徒歩5分  
+      a(href='') 神奈川県横浜市中区本町6-50-1
+      p みなとみらい線「馬車道駅」1B出口から直結 / JR・市営地下鉄「桜木町駅」より徒歩5分  
     div.wrap-content
       item-label-detail(content='入場料')
       p 無料
@@ -35,11 +34,29 @@ module-detail.py40
           margin-bottom: 16px;
           p {
             color: #2A45F4;
+            font-size: 20px;
             letter-spacing: 1px;
+            font-weight: bold;
+            line-height: 1.6;
           }
           a {
+            font-size: 20px;
             color: #2A45F4;
+            font-weight: bold;
             border-bottom: solid 0.4px;
+            line-height: 1.6;
+          }
+        }
+      }
+      @media only screen and (max-width : 600px) {
+        .wrap-module {
+          .wrap-content {
+            p {
+              font-size: 15px;
+            }
+            a {
+              font-size: 15px;
+            }
           }
         }
       }
