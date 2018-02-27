@@ -1,4 +1,4 @@
-item-label-event
+item-label-event.mb12
   div.wrap-item
     div.wrap-p
       p.px4.py1 { opts.content }
@@ -9,6 +9,7 @@ item-label-event
       .wrap-item {
         .wrap-p {
           display: inline-block;
+          left: -4px;
           position: relative;
           p {
             display: inline;
@@ -19,6 +20,13 @@ item-label-event
             background: linear-gradient(to right, rgba(255,255,255,0) 50%, rgba(255, 255, 255, 1) 50%);
             background-size: 200%;
             background-position: -100% 0;
+          }
+        }
+      }
+      @media only screen and (max-width : 600px) {
+        .wrap-item {
+          .wrap-p {
+            left: -2px;
           }
         }
       }

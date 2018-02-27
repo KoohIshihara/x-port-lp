@@ -5,17 +5,13 @@ module-event.pt40.pb40
       // sec1
       item-label-event(content='03.24th (sat)').mb28
       item-time-event(content='{times[0]}').mb20
-      div.wrap-guests.ml22.mb40
+      div.wrap-guests.ml22.mb80
         item-guest(each='{item in guests1}', content='{item}').mb12
       // sec2
       item-label-event(content='03.25th (sun)').mb28
-      item-time-event(content='{times[0]}').mb20
-      div.wrap-guests.ml22.mb40
-        item-guest(each='{item in guests1}', content='{item}').mb12
-      item-time-event(content='{times[0]}').mb20
-      div.wrap-guests.ml22.mb40
-        item-guest(each='{item in guests1}', content='{item}').mb12
-
+      item-time-event(content='{times[1]}').mb20
+      div.wrap-guests.ml22.mb80
+        item-guest(each='{item in guests2}', content='{item}').mb12
 
 
   style(scoped, type='less').
@@ -27,7 +23,7 @@ module-event.pt40.pb40
         max-width: 948px;
         margin: 0 auto;
         .wrap-events {
-          border-left: solid #fff 2px;
+          border-left: solid rgba(255, 255, 255, 0.6) 4px;
           .wrap-guests {
             display: flex;
             flex-wrap: wrap;
@@ -35,9 +31,14 @@ module-event.pt40.pb40
         }
       }
       @media only screen and (max-width : 600px) {
-        .wrap-guests {
-          display: block;
-        } 
+        .wrap-module {
+          .wrap-events {
+            border-left: solid rgba(255, 255, 255, 0.6) 2px;
+            .wrap-guests {
+              display: block;
+            }
+          }
+        }
       }
     }
 
@@ -49,12 +50,18 @@ module-event.pt40.pb40
     }
 
     this.times = [
-      { time: '14:00-15:00', label: '研究と作品の“際”' },
-      { time: '14:00-15:00', label: '研究と創職' },
+      { time: '16:00-17:30', label: '創造性と機械学習' },
+      { time: '14:00-15:30', label: '研究と創職' },
     ];
 
     this.guests1 = [
-      { name: '石原航', about: 'すごいひと。とってもえらいひと', src: './img/guests/akira.png'},
-      { name: '石原航', about: 'すごいひと。とってもえらいひと', src: './img/guests/akira.png'},
-      { name: '石原航', about: 'すごいひと。とってもえらいひと', src: './img/guests/akira.png'},
+      { name: '松川昌平', about: '慶應義塾大学環境情報学部准教授', src: './img/guests/akira.png'},
+      { name: '徳井直生', about: 'Qosmo', src: './img/guests/akira.png'},
+    ];
+    
+    this.guests2 = [
+      { name: '田中浩也', about: '慶應義塾大学環境情報学部教授', src: './img/guests/akira.png'},
+      { name: '秋吉浩気', about: '株式会社VUILD CEO', src: './img/guests/akira.png'},
+      { name: '佐々木雅宏', about: 'archiroid 共同代表', src: './img/guests/akira.png'},
+      { name: '髙橋征資', about: 'バイバイワールド代表', src: './img/guests/akira.png'},
     ];

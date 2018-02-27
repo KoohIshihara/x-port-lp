@@ -1,33 +1,62 @@
 item-time-event
   div.wrap-item.f
-    div.wrap-cercle
+    div.wrap-circle
       div.circle
-    div.wrap-info.ml12
-      p { opts.content.time }
-      h3.mt8 { opts.content.label }
+    div.wrap-info
+      p.mt8 { opts.content.time }
+      h3.mt4 { opts.content.label }
 
   style(scoped, type='less').
     :scope {
       display: block;
       .wrap-item {
-        .wrap-cercle {
+        .wrap-circle {
           .circle {
             position: relative;
             top: 1.6px;
-            left: -7px;
+            left: -15px;
             display: block;
-            width: 12px;
-            height: 12px;
+            width: 26px;
+            height: 26px;
             background: #FFF;
+            outline: solid 10px rgba(42, 69, 244, 1.0);
+            border: solid 4px rgba(42, 69, 244, 0.5);
+            //- box-sizing:content-box;
+            //- border: solid 4px #acacac
           } 
         }
         .wrap-info {
           p {
-            font-size: 16px;
+            font-size: 14px;
+            font-weight: bold;
             color: #FFF;
+            opacity: .85;
           }
           h3 {
+            font-size: 18px;
             color: #FFF;
+          }
+        }
+      }
+      @media only screen and (max-width : 600px) {
+        .wrap-item {
+          .wrap-circle {
+            .circle {
+              position: relative;
+              top: 1.6px;
+              left: -8px;
+              display: block;
+              width: 14px;
+              height: 14px;
+              background: #FFF;
+              outline: solid 4px rgba(42, 69, 244, 1.0);
+              border: solid 2px rgba(42, 69, 244, 0.5);
+            }
+          }
+        }
+        .wrap-info {
+          p {
+            margin-top: 0px;
           }
         }
       }

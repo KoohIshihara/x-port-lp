@@ -3,7 +3,8 @@ item-guest.s-mr0.mr40.mb20
     div.wrap-img
       img(src='{ opts.content.src }')
     div.wrap-info.ml12
-      div.warp-name.f.fm
+      //- div.wrap-name.f.fm
+      div.wrap-name
         p.name { opts.content.name }
       p.about { opts.content.about }
 
@@ -19,15 +20,18 @@ item-guest.s-mr0.mr40.mb20
             color: #FFF;
             letter-spacing: 1px;
           }
-          .warp-name {
-            height: 60%;
+          .wrap-name {
+            //- height: 60%;
             .name {
               font-size: 16px;
               font-weight: bold;
+              line-height: 1.5;
             }
           }
           .about {
-            font-size: 14px;
+            font-size: 13px;
+            font-weight: bold;
+            opacity: 0.85;
           }
         }
       }
