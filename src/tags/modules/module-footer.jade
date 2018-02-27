@@ -1,8 +1,8 @@
 module-footer
   div.wrap-module.py20
-    p.pb8.mt12 主催：慶應義塾大学湘南藤沢キャンパス（SFC）
-    p お問い合わせ：hogehoge@sfc.keio.ac.jp
-    p.copy Copyright © 2018 Hoge Fuga of Hoge. All Rights Reserved.
+    div.wrap-p
+      p お問い合わせ：hogehoge@sfc.keio.ac.jp
+      p Copyright © 2018 Hoge Fuga of Hoge. All Rights Reserved.
 
     
 
@@ -11,24 +11,39 @@ module-footer
       display: block;
       background: #EFEFEF;
       width: 100%;
-      height: 30vh;
+      height: 20vh;
       .wrap-module { 
         position: relative;
         width: 92%;
         height: 100%;
         max-width: 948px;
         margin: 0 auto;
-        font-weight: bold;
-        font-size: 12px;
-        p {
-          color: #000;
-          opacity: 0.6;
-        }
-        .copy {
+        .wrap-p{
           width: 100%;
           position: absolute;
           bottom: 5%;
-          text-align: center;
+          font-weight: bold;
+          p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #000;
+            opacity: 0.6;
+          }
+          //- .copy {
+          //-   width: 100%;
+          //-   position: absolute;
+          //-   bottom: 5%;
+            //- text-align: center;
+          //- }
+        }
+      }
+      @media only screen and (max-width : 600px) {
+        .wrap-module {
+          .wrap-p{
+            p {
+              font-size: 10px;
+            }
+          }
         }
       }
     }

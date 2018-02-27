@@ -1,15 +1,15 @@
 module-detail.py40
   div.wrap-module.py20
-    item-h2(content='{h2}').mb16
+    item-h2(content='{h2}').mb24
     div.wrap-content
       item-label-detail(content='日時')
       p 2018.03.24(sat) – 25(sun)
       p 11:00～18:00
     div.wrap-content
       item-label-detail(content='会場')
-      p YCC ヨコハマ創造都市センター 3Fイベントスペース
-      a(href='') 神奈川県横浜市中区本町6-50-1
-      p みなとみらい線「馬車道駅」1B出口から直結 / JR・市営地下鉄「桜木町駅」より徒歩5分  
+      p #[a(href='神奈川県横浜市中区本町6-50-1') YCC ヨコハマ創造都市センター] (3Fイベントスペース)
+      p みなとみらい線「馬車道駅」1B出口から直結
+      p JR・市営地下鉄「桜木町駅」より徒歩5分  
     div.wrap-content
       item-label-detail(content='入場料')
       p 無料
@@ -17,7 +17,8 @@ module-detail.py40
       item-label-detail(content='お問い合わせ')
       a(href='mailto:x-port@example.com') x-port@example.com
     div.wrap-content
-      item-label-detail(content='協賛')
+      item-label-detail(content='協賛企業')
+      p この展示会は、モノづくりに励む学生たちを応援する様々な企業よりご支援頂いおります。
       img(src='./img/cooperation/kooh.jpg')
     div.wrap-content
       p マップはまだ実装してないよ
@@ -31,19 +32,19 @@ module-detail.py40
         max-width: 948px;
         margin: 0 auto;
         .wrap-content {
-          margin-bottom: 16px;
+          margin-bottom: 32px;
           p {
             color: #2A45F4;
             font-size: 20px;
             letter-spacing: 1px;
-            font-weight: bold;
+            //- font-weight: bold;
             line-height: 1.6;
           }
           a {
             font-size: 20px;
             color: #2A45F4;
-            font-weight: bold;
-            border-bottom: solid 0.4px;
+            //- font-weight: bold;
+            border-bottom: solid 2px;
             line-height: 1.6;
           }
         }
@@ -52,10 +53,10 @@ module-detail.py40
         .wrap-module {
           .wrap-content {
             p {
-              font-size: 14px;
+              font-size: 15px;
             }
             a {
-              font-size: 14px;
+              font-size: 15px;
             }
           }
         }
