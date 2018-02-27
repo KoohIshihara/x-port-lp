@@ -3,8 +3,9 @@ module-top
     div.wrap-labels
       item-label-top(content='慶應義塾大学SFC')
       item-label-top(content='X-Designプログラム 合同展示会').mt8
-      h1.my20 X-port
+      h1.mt10.mb20 X-port
       item-label-top(content='2018.03.24th(sat) – 25th(sun)')
+      item-label-top(content='YCC ヨコハマ創造都市センター').mt8
 
 
   style(scoped, type='less').
@@ -21,7 +22,7 @@ module-top
         .wrap-labels {
           width: 90%;
           margin: 0 auto;
-          margin-top: 48px;
+          padding-top: 5vh;
           h1 {
             font-size: 15vw;
             letter-spacing: 2px;
@@ -31,8 +32,9 @@ module-top
       }
       @media only screen and (max-width : 600px) {
         .wrap-module {
-          background-image: url("./img/sp/hiro-top.jpg");
+          background-image: url("./img/sp/hiro-sp@2x.png");
           .wrap-labels {
+            padding-top: 10vh;
             h1 {
               font-size: 23vw;
             }
