@@ -29,7 +29,7 @@ riot.tag2('item-label-top', '<div class="wrap-item"> <div class="wrap-p"> <p cla
 riot.tag2('item-list', '<div class="wrap-item f"> <p class="num pt5">{opts.content.num}</p> <p class="ml12">{opts.content.content}</p> </div>', 'item-list,[data-is="item-list"]{display:block} item-list .wrap-item .num,[data-is="item-list"] .wrap-item .num{transform:scale(1.25)}', 'class="mb12"', function(opts) {
 });
 
-riot.tag2('item-time-event', '<div class="wrap-item f"> <div class="wrap-circle"> <div class="circle"></div> </div> <div class="wrap-info"> <p class="mt8">{opts.content.time}</p> <h3 class="mt4">{opts.content.label}</h3> </div> </div>', 'item-time-event,[data-is="item-time-event"]{display:block} item-time-event .wrap-item .wrap-circle .circle,[data-is="item-time-event"] .wrap-item .wrap-circle .circle{position:relative;top:1.6px;left:-15px;display:block;width:26px;height:26px;background:#FFF;outline:solid 10px #2a45f4;border:solid 4px rgba(42,69,244,0.5)} item-time-event .wrap-item .wrap-info p,[data-is="item-time-event"] .wrap-item .wrap-info p{font-size:14px;font-weight:bold;color:#FFF;opacity:.85} item-time-event .wrap-item .wrap-info h3,[data-is="item-time-event"] .wrap-item .wrap-info h3{font-size:20px;color:#FFF}@media only screen and (max-width:600px){ item-time-event .wrap-item .wrap-circle .circle,[data-is="item-time-event"] .wrap-item .wrap-circle .circle{position:relative;top:1.6px;left:-8px;display:block;width:14px;height:14px;background:#FFF;outline:solid 4px #2a45f4;border:solid 2px rgba(42,69,244,0.5)} item-time-event .wrap-info p,[data-is="item-time-event"] .wrap-info p{margin-top:0}}', '', function(opts) {
+riot.tag2('item-time-event', '<div class="wrap-item f"> <div class="wrap-circle"> <div class="circle"></div> </div> <div class="wrap-info"> <p class="mt8">{opts.content.time}</p> <h3 class="mt4">{opts.content.label}</h3> </div> </div>', 'item-time-event,[data-is="item-time-event"]{display:block} item-time-event .wrap-item .wrap-circle .circle,[data-is="item-time-event"] .wrap-item .wrap-circle .circle{position:relative;top:1.6px;left:-14.5px;display:block;width:26px;height:26px;background:#FFF;outline:solid 10px #2a45f4;border:solid 4px rgba(42,69,244,0.5)} item-time-event .wrap-item .wrap-info p,[data-is="item-time-event"] .wrap-item .wrap-info p{font-size:14px;font-weight:bold;color:#FFF;opacity:.85} item-time-event .wrap-item .wrap-info h3,[data-is="item-time-event"] .wrap-item .wrap-info h3{font-size:20px;color:#FFF}@media only screen and (max-width:600px){ item-time-event .wrap-item .wrap-circle .circle,[data-is="item-time-event"] .wrap-item .wrap-circle .circle{position:relative;top:1.6px;left:-8px;display:block;width:14px;height:14px;background:#FFF;outline:solid 10px #2a45f4;border:solid 2px rgba(42,69,244,0.4)} item-time-event .wrap-info p,[data-is="item-time-event"] .wrap-info p{margin-top:0}}', '', function(opts) {
 });
 
 riot.tag2('item-work', '<div class="wrap-item box-1x1" riot-style="background-image: url(&quot;{opts.content.src}&quot;);"></div>', 'item-work,[data-is="item-work"]{display:block;width:19.8%} item-work .wrap-item,[data-is="item-work"] .wrap-item{position:relative;width:100%;height:auto;background:#EEE;overflow:hidden;background-repeat:no-repeat;background-size:cover;background-position:center} item-work .box-1x1:before,[data-is="item-work"] .box-1x1:before{content:"";display:block;padding-top:100%}@media only screen and (max-width:600px){ item-work,[data-is="item-work"]{width:33%}}', 'class="mb2"', function(opts) {
@@ -88,48 +88,60 @@ riot.tag2('module-footer', '<div class="wrap-module py20"> <div class="wrap-p"> 
 riot.tag2('module-top', '<div class="wrap-module"> <div class="wrap-labels"> <item-label-top content="慶應義塾大学SFC"></item-label-top> <item-label-top class="mt8" content="X-Designプログラム 合同展示会"></item-label-top> <h1 class="mt10 mb20">X-port</h1> <item-label-top content="2018.03.24th(sat) – 25th(sun)"></item-label-top> <item-label-top class="mt8" content="YCC ヨコハマ創造都市センター"></item-label-top> </div> </div>', 'module-top,[data-is="module-top"]{display:block} module-top .wrap-module,[data-is="module-top"] .wrap-module{width:100%;height:140vh;background-image:url("img/hiro-pc.jpg");background-repeat:no-repeat;background-size:cover;background-position:top} module-top .wrap-module .wrap-labels,[data-is="module-top"] .wrap-module .wrap-labels{width:90%;margin:0 auto;padding-top:5vh} module-top .wrap-module .wrap-labels h1,[data-is="module-top"] .wrap-module .wrap-labels h1{font-size:15vw;letter-spacing:2px;color:#2B45F4}@media only screen and (max-width:600px){ module-top .wrap-module,[data-is="module-top"] .wrap-module{background-image:url("img/sp/hiro-sp@2x.png")} module-top .wrap-module .wrap-labels,[data-is="module-top"] .wrap-module .wrap-labels{padding-top:10vh} module-top .wrap-module .wrap-labels h1,[data-is="module-top"] .wrap-module .wrap-labels h1{font-size:23vw}}', '', function(opts) {
 });
 
-riot.tag2('module-works', '<div class="wrap-module"> <item-h2 class="mb16" content="{h2}"></item-h2> <div class="wrap-works f flex-wrap flex-between"> <item-work each="{item in works}" content="{item}"></item-work> </div> </div>', 'module-works,[data-is="module-works"]{display:block;background:#fff} module-works .wrap-module,[data-is="module-works"] .wrap-module{width:92%;max-width:948px;margin:0 auto} module-works .wrap-module p,[data-is="module-works"] .wrap-module p{color:#fff;letter-spacing:1px}', 'class="pt40 pb80"', function(opts) {
+riot.tag2('module-works', '<div class="wrap-module"> <item-h2 class="mb16" content="{h2}"></item-h2> <div class="wrap-works f flex-wrap flex-row flex-between"> <item-work each="{item in works}" content="{item}"></item-work> </div> </div>', 'module-works,[data-is="module-works"]{display:block;background:#fff} module-works .wrap-module,[data-is="module-works"] .wrap-module{width:92%;max-width:948px;margin:0 auto} module-works .wrap-module p,[data-is="module-works"] .wrap-module p{color:#fff;letter-spacing:1px}', 'class="pt40 pb80"', function(opts) {
     this.h2 = {
-      label: '展示作品',
+      label: '展示作品 (順次公開)',
       color: 'color:#2A45F4; border-color:#2A45F4;',
     };
 
     this.works = [
       {
         label: '石原作品',
-        src: './img/works/work-test.jpg',
+        src: './img/works/work-dummy@2x.png',
       },
       {
         label: '石原作品',
-        src: './img/works/work-test.jpg',
+        src: './img/works/work-dummy@2x.png',
       },
       {
         label: '石原作品',
-        src: './img/works/work-test.jpg',
+        src: './img/works/work-dummy@2x.png',
       },
       {
         label: '石原作品',
-        src: './img/works/work-test.jpg',
+        src: './img/works/work-dummy@2x.png',
       },
       {
         label: '石原作品',
-        src: './img/works/work-test.jpg',
+        src: './img/works/work-dummy@2x.png',
       },
       {
         label: '石原作品',
-        src: './img/works/work-test.jpg',
+        src: './img/works/work-dummy@2x.png',
       },
       {
         label: '石原作品',
-        src: './img/works/work-test.jpg',
+        src: './img/works/work-dummy@2x.png',
       },
       {
         label: '石原作品',
-        src: './img/works/work-test.jpg',
+        src: './img/works/work-dummy@2x.png',
       },
       {
         label: '石原作品',
-        src: './img/works/work-test.jpg',
+        src: './img/works/work-dummy@2x.png',
+      },
+      {
+        label: '石原作品',
+        src: './img/works/work-dummy@2x.png',
+      },
+      {
+        label: '石原作品',
+        src: './img/works/work-dummy@2x.png',
+      },
+      {
+        label: '石原作品',
+        src: './img/works/work-dummy@2x.png',
       },
     ];
 });
