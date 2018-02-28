@@ -1,0 +1,33 @@
+item-cooperation.mb24
+  div.wrap-item(style='background-image: url("{opts.content.src}");')
+  
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      width: 33.3%;
+      height: 12vh;
+      .wrap-item {
+        position: relative;
+        width: auto;
+        height: 100%;
+        //- background: #EEE;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: auto 50px;
+        background-position: center;
+      }
+      .box-1x1:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+      @media only screen and (max-width : 600px) {
+        width: 50%;
+        height: 20vh;
+        .wrap-item {
+          background-size: auto 50px;
+        }
+      }
+    }
+
+  script.

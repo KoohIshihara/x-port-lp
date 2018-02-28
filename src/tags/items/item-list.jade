@@ -1,17 +1,26 @@
 item-list.mb12
   div.wrap-item.f
-    p.num.pt5 { opts.content.num }
+    p.num { opts.content.num }
     p.ml12 { opts.content.content }
-    
-
+  
+  
   style(scoped, type='less').
     :scope {
       display: block;
       .wrap-item {
         .num {
-          transform: scale(1.25);
+          transform: scale(1.1);
+          vertical-align: top;
+        }
+      }
+      @media only screen and (max-width : 600px) {
+        .wrap-item {
+          .num {        
+            padding-top: 3px;
+          }
         }
       }
     }
-
+  
+  
   script.
