@@ -10,7 +10,8 @@ module-detail.py40
       p #[a(target='_blank' href='https://goo.gl/maps/3jjwRbB8C5o') YCC ヨコハマ創造都市センター]
       p (3Fイベントスペース)
       p みなとみらい線「馬車道駅」1B出口から直結
-      p JR・市営地下鉄「桜木町駅」より徒歩5分  
+      p JR・市営地下鉄「桜木町駅」より徒歩5分
+      item-map
     div.wrap-content
       item-label-detail(content='入場料')
       p 無料
@@ -24,7 +25,7 @@ module-detail.py40
       div.wrap-cooperations.f.flex-wrap.flex-row.flex-around
         item-cooperation(each='{item in cooperations}', content='{item}')
     div.wrap-content
-      p マップはまだ実装してないよ
+      //- p マップはまだ実装してないよ
 
   style(scoped, type='less').
     :scope {
