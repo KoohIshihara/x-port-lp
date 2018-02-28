@@ -1,8 +1,9 @@
 module-works.pt40.pb80
   div.wrap-module
-    item-h2(content='{h2}').mb16
+    item-h2(content='{h2}').mb32
     div.wrap-works.f.flex-wrap.flex-row.flex-between
       item-work(each='{item in works}', content='{item}')
+      item-work(each='{item in empty}', content='{item}').hide
 
   style(scoped, type='less').
     :scope {
@@ -17,14 +18,19 @@ module-works.pt40.pb80
           letter-spacing: 1px;
         }
       }
+      @media only screen and (max-width : 600px) {
+        .hide {
+          display: none;
+        }
+      }
     }
-
+  
   script.
     this.h2 = {
       label: '展示作品 (順次公開)',
       color: 'color:#2A45F4; border-color:#2A45F4;',
     };
-
+  
     this.works = [
       {
         label: '石原作品',
@@ -74,4 +80,43 @@ module-works.pt40.pb80
         label: '石原作品',
         src: './img/works/work-dummy@2x.png',
       },
+      {
+        label: '石原作品',
+        src: './img/works/work-dummy@2x.png',
+      },
+      {
+        label: '石原作品',
+        src: './img/works/work-dummy@2x.png',
+      },
+      {
+        label: '石原作品',
+        src: './img/works/work-dummy@2x.png',
+      },
+      {
+        label: '石原作品',
+        src: './img/works/work-dummy@2x.png',
+      },
+      {
+        label: '石原作品',
+        src: './img/works/work-dummy@2x.png',
+      },
+      {
+        label: '石原作品',
+        src: './img/works/work-dummy@2x.png',
+      },
+      {
+        label: '石原作品',
+        src: './img/works/work-dummy@2x.png',
+      },
+      {
+        label: '石原作品',
+        src: './img/works/work-dummy@2x.png',
+      },
     ];
+  
+    this.empty = [
+      {
+        label: 'dummy flex',
+        src: '',
+      },
+    ]
