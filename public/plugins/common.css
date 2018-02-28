@@ -29,6 +29,20 @@ a {
   font-family: "Yu Gothic", Noto Sans Japanese, Noto Sans JP , helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
 }
 
+.no-top-marker {
+  background-size: 201% !important;
+  background-position: 0% 0% !important;
+}
+
+.no-marker {
+  background-size: 201% !important;
+  background-position: 0% 0% !important;
+}
+
+.no-background {
+  background: rgba(255,255,255,0) !important;
+}
+
 .add-opacity {
   opacity: 0.0;
 }

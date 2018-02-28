@@ -1,5 +1,6 @@
 module-top
   div.wrap-module
+    div.bg-cover-top
     div.wrap-labels
       item-label-top(content='慶應義塾大学SFC')
       item-label-top(content='X-Designプログラム 合同展示会').mt8
@@ -12,14 +13,25 @@ module-top
     :scope {
       display: block;
       .wrap-module {
+        position: relative;
+        z-index: 0;
         width: 100%;
         height: 135vh;
-        //- hogehoge
         background-image: url("./img/hiro-pc@2x.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom;
+        .bg-cover-top {
+          position: absolute;
+          z-index: 1;
+          width: 100%;
+          height: 135vh;
+          background: #FFF;
+        }
+        
         .wrap-labels {
+          position: relative;
+          z-index: 2;
           width: 90%;
           margin: 0 auto;
           padding-top: 5vh;

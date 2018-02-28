@@ -1,8 +1,7 @@
 item-label-top
   div.wrap-item
     div.wrap-p
-      p.pl2.pr10.py3 { opts.content }
-      
+      p.no-top-marker.pl12.pr10.py3 {opts.content}      
 
 
   style(scoped, type='less').
@@ -20,7 +19,9 @@ item-label-top
             letter-spacing: 2px;
             background: linear-gradient(to right, rgba(255,255,255,0) 50%, rgba(42, 69, 244, 1) 50%);
             background-size: 200%;
+
             background-position: -100% 0;
+            transition: .5s ease-in-out;
           }
         }
       }
