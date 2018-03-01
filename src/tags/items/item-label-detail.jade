@@ -1,7 +1,7 @@
 item-label-detail.mb12
   div.wrap-item
     div.wrap-p
-      p.px4.py8 { opts.content }
+      p.px4.py8.no-marker { opts.content }
       
   style(scoped, type='less').
     :scope {
@@ -18,7 +18,9 @@ item-label-detail.mb12
             letter-spacing: 1px;
             background: linear-gradient(to right, rgba(255,255,255,0) 50%, rgba(42, 69, 244, 1) 50%);
             background-size: 200%;
+
             background-position: -100% 0;
+            transition: .5s ease-in-out;
           }
         }
       }

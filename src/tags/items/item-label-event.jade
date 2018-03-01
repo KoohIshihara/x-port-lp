@@ -1,7 +1,7 @@
 item-label-event.mb32
   div.wrap-item
     div.wrap-p
-      p.px4.py1 { opts.content }
+      p.px4.py1.no-marker { opts.content }
       
   style(scoped, type='less').
     :scope {
@@ -19,7 +19,9 @@ item-label-event.mb32
             letter-spacing: 2px;
             background: linear-gradient(to right, rgba(255,255,255,0) 50%, rgba(255, 255, 255, 1) 50%);
             background-size: 200%;
+
             background-position: -100% 0;
+            transition: .5s ease-in-out;
           }
         }
       }
@@ -36,3 +38,5 @@ item-label-event.mb32
     }
 
   script.
+
+    

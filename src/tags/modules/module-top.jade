@@ -1,9 +1,10 @@
 module-top
   div.wrap-module
+    div.bg-cover-top
     div.wrap-labels
       item-label-top(content='慶應義塾大学SFC')
       item-label-top(content='学生有志 合同展示会 2018').mt8
-      h1.mt5.mb15 X-port
+      h1.mt10.mb20 X-port
       item-label-top(content='2018.03.24th(sat) – 25th(sun)')
       item-label-top(content='YCC ヨコハマ創造都市センター').mt8
 
@@ -12,14 +13,25 @@ module-top
     :scope {
       display: block;
       .wrap-module {
+        position: relative;
+        z-index: 0;
         width: 100%;
         height: 135vh;
-        //- hogehoge
         background-image: url("./img/hiro-pc@2x.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom;
+        .bg-cover-top {
+          position: absolute;
+          z-index: 1;
+          width: 100%;
+          height: 135vh;
+          background: #FFF;
+        }
+        
         .wrap-labels {
+          position: relative;
+          z-index: 2;
           width: 90%;
           margin: 0 auto;
           padding-top: 5vh;
