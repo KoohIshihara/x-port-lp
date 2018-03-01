@@ -11,10 +11,10 @@ riot.tag2('app', '<content></content>', '', '', function(opts) {
     };
 });
 
-riot.tag2('item-cooperation', '<div class="wrap-item" riot-style="background-image: url(&quot;{opts.content.src}&quot;);"></div>', 'item-cooperation,[data-is="item-cooperation"]{display:block;width:25%;height:8vh} item-cooperation .wrap-item,[data-is="item-cooperation"] .wrap-item{position:relative;height:100%;width:100%;overflow:hidden;background-repeat:no-repeat;background-size:contain;background-position:center} item-cooperation .box-1x1:before,[data-is="item-cooperation"] .box-1x1:before{content:"";display:block;padding-top:100%}@media only screen and (max-width:600px){ item-cooperation,[data-is="item-cooperation"]{width:80%;height:8vh} item-cooperation .wrap-item,[data-is="item-cooperation"] .wrap-item{margin-bottom:32px;background-size:contain}}', 'class="my32"', function(opts) {
+riot.tag2('item-cooperation', '<div class="wrap-item" riot-style="background-image: url(&quot;{opts.content.src}&quot;);"></div>', 'item-cooperation,[data-is="item-cooperation"]{display:block;width:25%;height:10vh} item-cooperation .wrap-item,[data-is="item-cooperation"] .wrap-item{position:relative;height:100%;width:100%;overflow:hidden;background-repeat:no-repeat;background-size:contain;background-position:center} item-cooperation .box-1x1:before,[data-is="item-cooperation"] .box-1x1:before{content:"";display:block;padding-top:100%}@media only screen and (max-width:600px){ item-cooperation,[data-is="item-cooperation"]{width:80%;height:8vh} item-cooperation .wrap-item,[data-is="item-cooperation"] .wrap-item{margin-bottom:32px;background-size:contain}}', 'class="my32"', function(opts) {
 });
 
-riot.tag2('item-guest', '<div class="wrap-item f"> <div class="wrap-img"><img riot-src="{opts.content.src}"></div> <div class="wrap-info ml8"> <div class="wrap-name"> <p class="name">{opts.content.name}</p> </div> <p class="about">{opts.content.about}</p> </div> </div>', 'item-guest,[data-is="item-guest"]{display:block} item-guest .wrap-item .wrap-img,[data-is="item-guest"] .wrap-item .wrap-img{width:64px} item-guest .wrap-item .wrap-info p,[data-is="item-guest"] .wrap-item .wrap-info p{color:#FFF;letter-spacing:1px} item-guest .wrap-item .wrap-info .wrap-name .name,[data-is="item-guest"] .wrap-item .wrap-info .wrap-name .name{font-size:16px;font-weight:bold;line-height:1.5} item-guest .wrap-item .wrap-info .about,[data-is="item-guest"] .wrap-item .wrap-info .about{font-size:13px;opacity:.85}', 'class="s-mr0 mr40 mb20"', function(opts) {
+riot.tag2('item-guest', '<div class="wrap-item f"> <div class="wrap-img"><img riot-src="{opts.content.src}"></div> <div class="wrap-info ml8"> <div class="wrap-name"> <p class="name">{opts.content.name}</p> </div> <p class="about">{opts.content.about}</p> </div> </div>', 'item-guest,[data-is="item-guest"]{display:block;width:50%} item-guest .wrap-item .wrap-img,[data-is="item-guest"] .wrap-item .wrap-img{width:10vw} item-guest .wrap-item .wrap-info p,[data-is="item-guest"] .wrap-item .wrap-info p{color:#FFF;letter-spacing:1px} item-guest .wrap-item .wrap-info .wrap-name .name,[data-is="item-guest"] .wrap-item .wrap-info .wrap-name .name{font-size:16px;font-weight:bold;line-height:1.5} item-guest .wrap-item .wrap-info .about,[data-is="item-guest"] .wrap-item .wrap-info .about{font-size:13px;opacity:.85}@media only screen and (max-width:600px){ item-guest,[data-is="item-guest"]{width:auto} item-guest .wrap-item .wrap-img,[data-is="item-guest"] .wrap-item .wrap-img{width:20vw}}', 'class="s-mr0 mb20"', function(opts) {
 });
 
 riot.tag2('item-h2', '<div class="wrap-item"> <h2 riot-style="{opts.content.color};">{opts.content.label}</h2> </div>', 'item-h2,[data-is="item-h2"]{display:block} item-h2 .wrap-item h2,[data-is="item-h2"] .wrap-item h2{font-size:3vw;letter-spacing:2px;padding:.02em .5em;background:transparent;border-left:solid 5px #2B45F4}@media only screen and (max-width:600px){ item-h2 .wrap-item h2,[data-is="item-h2"] .wrap-item h2{font-size:24px}}', '', function(opts) {
@@ -48,7 +48,7 @@ riot.tag2('item-time-event', '<div class="wrap-item f"> <div class="wrap-circle"
 riot.tag2('item-work', '<div class="wrap-item box-1x1" riot-style="background-image: url(&quot;{opts.content.src}&quot;);"></div>', 'item-work,[data-is="item-work"]{display:block;width:19.8%} item-work .wrap-item,[data-is="item-work"] .wrap-item{position:relative;width:100%;height:auto;overflow:hidden;background-repeat:no-repeat;background-size:cover;background-position:center} item-work .box-1x1:before,[data-is="item-work"] .box-1x1:before{content:"";display:block;padding-top:100%}@media only screen and (max-width:600px){ item-work,[data-is="item-work"]{width:33%}}', 'class="mb2"', function(opts) {
 });
 
-riot.tag2('module-about', '<div class="wrap-module"> <item-h2 class="mb32" content="{h2}"></item-h2> <p class="mb32">本年度のテーマである「X-port」には2つの意味が込められています。</p> <wrap-list> <item-list each="{item in lists}" content="{item}"></item-list> </wrap-list> </div>', 'module-about,[data-is="module-about"]{display:block;background:#2B45F4} module-about .wrap-module,[data-is="module-about"] .wrap-module{width:92%;max-width:948px;margin:0 auto} module-about .wrap-module p,[data-is="module-about"] .wrap-module p{font-size:18px;color:#fff;letter-spacing:1px;line-height:1.8;font-weight:bold;opacity:.85}@media only screen and (max-width:600px){ module-about .wrap-module p,[data-is="module-about"] .wrap-module p{font-size:15px}}', 'class="pt40 pb80"', function(opts) {
+riot.tag2('module-about', '<div class="wrap-module"> <item-h2 class="mb32" content="{h2}"></item-h2> <p class="mb32">本年度のテーマである「X-port」には2つの意味が込められています。</p> <wrap-list> <item-list each="{item in lists}" content="{item}"></item-list> </wrap-list> </div>', 'module-about,[data-is="module-about"]{display:block;background:#2B45F4} module-about .wrap-module,[data-is="module-about"] .wrap-module{width:92%;max-width:948px;margin:0 auto} module-about .wrap-module p,[data-is="module-about"] .wrap-module p{font-size:18px;color:#fff;letter-spacing:1px;line-height:1.6;font-weight:bold;opacity:.85}@media only screen and (max-width:600px){ module-about .wrap-module p,[data-is="module-about"] .wrap-module p{font-size:15px}}', 'class="pt40 pb80"', function(opts) {
     this.h2 = {
       label: 'X-portとは',
       color: 'color:#fff; border-color:#fff;',
@@ -73,15 +73,15 @@ riot.tag2('module-detail', '<div class="wrap-module py20"> <item-h2 class="mb24"
     this.cooperations = [
       {
         label: 'moff',
-        src: './img/cooperation/fabcross.gif',
-      },
-      {
-        label: 'moff',
         src: './img/cooperation/dricos_logo_navy@2x.png',
       },
       {
         label: 'moff',
         src: './img/cooperation/moff_logo@2x.png',
+      },
+      {
+        label: 'fabcross',
+        src: './img/cooperation/fabcross.gif',
       },
 
     ];
@@ -99,19 +99,19 @@ riot.tag2('module-event', '<div class="wrap-module"> <item-h2 class="mb16" conte
     ];
 
     this.guests1 = [
-      { name: '松川昌平', about: '慶應義塾大学環境情報学部准教授', src: './img/guests/akira.png'},
-      { name: '徳井直生', about: 'Qosmo', src: './img/guests/akira.png'},
+      { name: '松川昌平', about: '慶應義塾大学環境情報学部准教授', src: './img/guests/matsukawa.jpg'},
+      { name: '徳井直生', about: '株式会社Qosmo (コズモ) 代表取締役', src: './img/guests/tokui.jpg'},
     ];
 
     this.guests2 = [
-      { name: '田中浩也', about: '慶應義塾大学環境情報学部教授', src: './img/guests/akira.png'},
-      { name: '秋吉浩気', about: '株式会社VUILD CEO', src: './img/guests/akira.png'},
-      { name: '佐々木雅宏', about: 'archiroid 共同代表', src: './img/guests/akira.png'},
-      { name: '髙橋征資', about: 'バイバイワールド代表', src: './img/guests/akira.png'},
+      { name: '田中浩也', about: '慶應義塾大学環境情報学部教授', src: './img/guests/tanaka.jpg'},
+      { name: '秋吉浩気', about: '株式会社VUILD 代表取締役', src: './img/guests/akiyoshi.jpg'},
+      { name: '佐々木雅宏', about: '合同会社archiroid 共同代表', src: './img/guests/sasaki.jpg'},
+      { name: '髙橋征資', about: 'バイバイワールド株式会社 代表取締役', src: './img/guests/takahashi.jpg'},
     ];
 });
 
-riot.tag2('module-footer', '<div class="wrap-module py20"> <div class="wrap-p"> <p>お問い合わせ：hogehoge@sfc.keio.ac.jp</p> <p>Copyright © 2018 Hoge Fuga of Hoge. All Rights Reserved.</p> </div> </div>', 'module-footer,[data-is="module-footer"]{display:block;background:#EFEFEF;width:100%;height:20vh} module-footer .wrap-module,[data-is="module-footer"] .wrap-module{position:relative;width:92%;height:100%;max-width:948px;margin:0 auto} module-footer .wrap-module .wrap-p,[data-is="module-footer"] .wrap-module .wrap-p{width:100%;position:absolute;bottom:5%} module-footer .wrap-module .wrap-p p,[data-is="module-footer"] .wrap-module .wrap-p p{font-size:14px;line-height:1.8;color:#000;opacity:.6}@media only screen and (max-width:600px){ module-footer .wrap-module .wrap-p p,[data-is="module-footer"] .wrap-module .wrap-p p{font-size:10px}}', '', function(opts) {
+riot.tag2('module-footer', '<div class="wrap-module py20"> <div class="wrap-p"> <p>お問い合わせ：hogehoge@sfc.keio.ac.jp</p> <p>Copyright © 2018 Hoge Fuga of Hoge. All Rights Reserved.</p> </div> </div>', 'module-footer,[data-is="module-footer"]{display:block;background:#EFEFEF;width:100%;height:18vh} module-footer .wrap-module,[data-is="module-footer"] .wrap-module{position:relative;width:92%;height:100%;max-width:948px;margin:0 auto} module-footer .wrap-module .wrap-p,[data-is="module-footer"] .wrap-module .wrap-p{width:100%;position:absolute;bottom:5%} module-footer .wrap-module .wrap-p p,[data-is="module-footer"] .wrap-module .wrap-p p{font-size:14px;line-height:1.8;color:#000;opacity:.6}@media only screen and (max-width:600px){ module-footer .wrap-module .wrap-p p,[data-is="module-footer"] .wrap-module .wrap-p p{font-size:10px}}', '', function(opts) {
 });
 
 riot.tag2('module-top', '<div class="wrap-module"> <div class="bg-cover-top"></div> <div class="wrap-labels"> <item-label-top content="慶應義塾大学SFC"></item-label-top> <item-label-top class="mt8" content="学生有志 合同展示会 2018"></item-label-top> <h1 class="mt10 mb20">X-port</h1> <item-label-top content="2018.03.24th(sat) – 25th(sun)"></item-label-top> <item-label-top class="mt8" content="YCC ヨコハマ創造都市センター"></item-label-top> </div> </div>', 'module-top,[data-is="module-top"]{display:block} module-top .wrap-module,[data-is="module-top"] .wrap-module{position:relative;z-index:0;width:100%;height:135vh;background-image:url("img/hiro-pc@2x.png");background-repeat:no-repeat;background-size:cover;background-position:bottom} module-top .wrap-module .bg-cover-top,[data-is="module-top"] .wrap-module .bg-cover-top{position:absolute;z-index:1;width:100%;height:135vh;background:#FFF} module-top .wrap-module .wrap-labels,[data-is="module-top"] .wrap-module .wrap-labels{position:relative;z-index:2;width:90%;margin:0 auto;padding-top:5vh} module-top .wrap-module .wrap-labels h1,[data-is="module-top"] .wrap-module .wrap-labels h1{font-size:15vw;letter-spacing:2px;color:#2B45F4}@media only screen and (max-width:600px){ module-top .wrap-module,[data-is="module-top"] .wrap-module{background-image:url("img/sp/hiro-sp@2x.png")} module-top .wrap-module .wrap-labels,[data-is="module-top"] .wrap-module .wrap-labels{padding-top:10vh} module-top .wrap-module .wrap-labels h1,[data-is="module-top"] .wrap-module .wrap-labels h1{font-size:25vw}}@media only screen and (min-width:960px){ module-top .wrap-module .wrap-labels h1,[data-is="module-top"] .wrap-module .wrap-labels h1{font-size:144px}}', '', function(opts) {
