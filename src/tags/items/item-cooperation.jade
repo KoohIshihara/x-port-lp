@@ -1,19 +1,19 @@
-item-cooperation.mb24
+item-cooperation.my32
   div.wrap-item(style='background-image: url("{opts.content.src}");')
   
   style(scoped, type='less').
     :scope {
       display: block;
-      width: 33.3%;
-      height: 12vh;
+      width: 25%;
+      height: 8vh;
       .wrap-item {
         position: relative;
-        width: auto;
         height: 100%;
+        width:100%;
         //- background: #EEE;
         overflow: hidden;
         background-repeat: no-repeat;
-        background-size: auto 50px;
+        background-size: contain;
         background-position: center;
       }
       .box-1x1:before {
@@ -22,10 +22,11 @@ item-cooperation.mb24
         padding-top: 100%;
       }
       @media only screen and (max-width : 600px) {
-        width: 50%;
-        height: 20vh;
+        width: 80%;
+        height: 8vh;
         .wrap-item {
-          background-size: auto 50px;
+          margin-bottom: 32px;
+          background-size: contain;
         }
       }
     }
