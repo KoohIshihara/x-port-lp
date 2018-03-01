@@ -22,8 +22,8 @@ window.onload = function () {
   setTimeout(function(){
     GLOB.firstAnimTimer = setInterval(firstAnim, 200);
   }, 400);
-  
-  
+
+
   var scrollFunc = function(){
     var scroll = $(window).scrollTop();
     GLOB.scrollValue = scroll;
