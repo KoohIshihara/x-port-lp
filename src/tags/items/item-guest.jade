@@ -14,12 +14,16 @@ item-guest.s-mr0.mb20
       width: 50%;
       .wrap-item {
         .wrap-img {
-          width: 10vw;
+          width: 20%;
+          img {
+            width: 100%;
+          }
         }
         .wrap-info {
+          width: 80%;
           p {
             color: #FFF;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
           }
           .wrap-name {
             //- height: 60%;
@@ -37,10 +41,14 @@ item-guest.s-mr0.mb20
         }
       }
       @media only screen and (max-width : 600px) {
-        width: auto;
+        width: 100%;
         .wrap-item {
-          .wrap-img {
-            width: 20vw;
+          .wrap-info {
+            .wrap-name {
+              .name {
+                font-size: 16px;
+              }
+            }
           }
         }
       }

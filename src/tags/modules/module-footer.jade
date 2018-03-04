@@ -1,7 +1,8 @@
 module-footer
   div.wrap-module.py20
     div.wrap-p
-      p お問い合わせ: Twitter: #[a(href='https://twitter.com/x_port2018') @x_port2018] / Facebook: #[a(href='') X-port]
+      p.name 慶應義塾大学SFC 学生有志展示会 2018
+      p お問い合わせ: Twitter: #[a(target='_blank' href='https://twitter.com/x_port2018') @x_port2018] / Facebook: #[a(target='_blank' href='https://www.facebook.com/XportSFC') XportSFC]
       p Copyright © SFC X-port 2018. All Rights Reserved.
 
     
@@ -23,8 +24,12 @@ module-footer
           position: absolute;
           bottom: 5%;
           //- font-weight: bold;
+          .name {
+            //- font-size: 14px;
+            font-weight: bold;
+          }
           p {
-            font-size: 14px;
+            font-size: 12px;
             line-height: 1.8;
             color: #000;
             opacity: 0.6;
@@ -42,7 +47,7 @@ module-footer
       }
       @media only screen and (max-width : 600px) {
         .wrap-module {
-          .wrap-p{
+          .wrap-p {
             p {
               font-size: 10px;
             }
