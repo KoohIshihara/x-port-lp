@@ -1,7 +1,7 @@
 page-top
   module-top
   module-about
-  module-works
+  module-works#works
   module-event
   module-detail
   module-footer
@@ -25,3 +25,19 @@ page-top
     }
 
   script.
+    /*
+    this.on('mount', function() {
+      GLOB.visitedTop = true;
+    });
+    */
+    this.on('mount', function(){
+
+      if(GLOB.scrollPoint){
+        TO_SCROLL.toScroll(GLOB.scrollPoint);
+        scrollPoint = false;
+      }
+
+      setTimeout(function() {
+        $('app').addClass('not-opacity');
+      }, 400);
+    });

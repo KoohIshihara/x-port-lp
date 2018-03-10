@@ -48,7 +48,7 @@ a {
 }
 
 .not-opacity {
-  opacity: 1!important;
+  opacity: 1 !important;
   transition-property: all;
   transition-duration: 400ms;
   transition-delay: 0s;

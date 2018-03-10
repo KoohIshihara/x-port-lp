@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -45,6 +46,18 @@
       });
       riot.update();
     })
+
+    riot.route('/works/*', function(tagName) {
+      console.log(tagName);
+      // APIからとってくる
+      var content = {
+        name: 'kooh',
+        intro: 'Artist',
+      }
+      riot.mount('content-work', 'page-work', {content: content});
+      riot.update();
+    })
+    
     riot.route(function(tagName) {
       console.log(tagName);
       tagName = tagName || 'page-top';

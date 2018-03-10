@@ -5,23 +5,35 @@ block content
   app
   script(src='./scripts/tags.js')
   script.
-    riot.route('/members/*', function(tagName) {
-      console.log(tagName);
-      // APIからとってくる
-      var content = {
-        name: 'kooh',
-        intro: 'Artist',
+
+    riot.route('/works/*', function(tagName) {
+    
+      $('app').removeClass('not-opacity');
+
+      var content = $('content')[0].dataset.is;
+      if(content==undefined){
+        riot.mount('content', 'page-top', {content: 'content'});
       }
-      riot.mount('content', 'page-members', {content: content});
+      
+      riot.mount('content', 'page-work', {content: content});
       riot.update();
     })
+
     riot.route(function(tagName) {
+
+      $('app').removeClass('not-opacity');
+
       console.log(tagName);
       tagName = tagName || 'page-top';
-      //debugger
-      riot.mount('content', tagName, {content: 'content'});
-      riot.update();
+      var content = $('content')[0].dataset.is;
+      
+      //if(GLOB.visitedTop != true){
+        console.log('topmounted')
+        riot.mount('content', 'page-top', {content: 'content'});
+        riot.update();
+      //}
     });
+
     riot.route.start(true);
     
     var tags = riot.mount('app');

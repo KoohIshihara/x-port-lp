@@ -1,0 +1,31 @@
+item-back
+  a.warp-item.f#back
+    img(src='./img/icon-back.svg')
+    p.ml12 戻る
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      .warp-item {
+        p {
+          font-size: 18px;
+          color: #ccc;
+          font-weight: 100;
+        }
+      }
+    }
+
+  script.
+    this.on('updated', function(){
+      $('#back').on('click',function(){
+
+        /*
+        setTimeout(function(){
+          debugger
+          TO_SCROLL.toScroll('module-works');
+        }, 400);
+        */
+        location.href = './#works';
+
+      });
+    });
