@@ -18,9 +18,8 @@ var TO_SCROLL = {
 GLOB.scrollPoint = 'module-top';
 
 window.onload = function () {
-  fireAnim();
+  //fireAnim();
 };
-
 
 var fireAnim = function(){
   GLOB.loopCount = 0;

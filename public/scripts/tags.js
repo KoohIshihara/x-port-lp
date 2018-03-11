@@ -140,13 +140,17 @@ riot.tag2('module-header-work', '<div class="wrap-module"> <item-back></item-bac
 });
 
 riot.tag2('module-top', '<div class="wrap-module"> <div class="bg-cover-top"></div> <div class="wrap-labels"> <item-label-top content="慶應義塾大学SFC"></item-label-top> <item-label-top class="mt8" content="学生有志 合同展示会 2018"></item-label-top> <h1 class="mt10 mb20">X-port</h1> <item-label-top content="2018.03.24th(sat) – 25th(sun)"></item-label-top> <item-label-top class="mt12" content="YCC ヨコハマ創造都市センター"></item-label-top> </div> </div>', 'module-top,[data-is="module-top"]{display:block} module-top .wrap-module,[data-is="module-top"] .wrap-module{position:relative;z-index:0;width:100%;height:135vh;background-image:url("img/hiro-pc@2x.png");background-repeat:no-repeat;background-size:cover;background-position:bottom} module-top .wrap-module .bg-cover-top,[data-is="module-top"] .wrap-module .bg-cover-top{position:absolute;z-index:1;width:100%;height:135vh;background:#FFF;padding-top:-100px} module-top .wrap-module .wrap-labels,[data-is="module-top"] .wrap-module .wrap-labels{position:relative;z-index:2;width:92%;margin:0 auto;padding-top:5vh} module-top .wrap-module .wrap-labels h1,[data-is="module-top"] .wrap-module .wrap-labels h1{font-size:15vw;letter-spacing:2px;color:#2B45F4}@media only screen and (max-width:600px){ module-top .wrap-module,[data-is="module-top"] .wrap-module{background-image:url("img/sp/hiro-sp@2x.png")} module-top .wrap-module .wrap-labels,[data-is="module-top"] .wrap-module .wrap-labels{padding-top:10vh} module-top .wrap-module .wrap-labels h1,[data-is="module-top"] .wrap-module .wrap-labels h1{font-size:25vw}}@media only screen and (min-width:960px){ module-top .wrap-module .wrap-labels h1,[data-is="module-top"] .wrap-module .wrap-labels h1{font-size:144px} module-top .wrap-module .wrap-labels item-label-top,[data-is="module-top"] .wrap-module .wrap-labels item-label-top{font-size:43.2px}}', '', function(opts) {
+    this.on('mount', function(){
+      fireAnim();
+    });
 });
 
-riot.tag2('module-works', '<div class="wrap-module"> <item-h2 class="mb32" content="{h2}"></item-h2> <div class="wrap-works f flex-wrap flex-row flex-between"> <item-work each="{item in works}" content="{item}"></item-work> </div> </div>', 'module-works,[data-is="module-works"]{display:block;background:#fff} module-works .wrap-module,[data-is="module-works"] .wrap-module{width:92%;max-width:948px;margin:0 auto} module-works .wrap-module p,[data-is="module-works"] .wrap-module p{color:#fff;letter-spacing:1px}@media only screen and (max-width:600px){ module-works .hide,[data-is="module-works"] .hide{display:none}}', 'class="pt40 pb80"', function(opts) {
+riot.tag2('module-works', '<div class="wrap-module"> <item-h2 class="mb32" content="{h2}"></item-h2> <div class="wrap-works f flex-wrap flex-row flex-between"> <item-work each="{item in works}" content="{item}"></item-work> <item-work class="hide" each="{item in empty}" content="{item}"></item-work> </div> </div>', 'module-works,[data-is="module-works"]{display:block;background:#fff} module-works .wrap-module,[data-is="module-works"] .wrap-module{width:92%;max-width:948px;margin:0 auto} module-works .wrap-module p,[data-is="module-works"] .wrap-module p{color:#fff;letter-spacing:1px}@media only screen and (max-width:600px){ module-works .hide,[data-is="module-works"] .hide{display:none}}', 'class="pt40 pb80"', function(opts) {
     this.h2 = {
       label: '展示作品 (順次公開)',
       color: 'color:#2A45F4; border-color:#2A45F4;',
     };
+
     this.works = topContents;
 
     this.empty = [
@@ -155,6 +159,7 @@ riot.tag2('module-works', '<div class="wrap-module"> <item-h2 class="mb32" conte
         src: '',
       },
     ]
+
 });
 
 riot.tag2('page-members', '<h2>{opts.content.name}</h2> <p>{opts.content.intro}</p>', '', '', function(opts) {
