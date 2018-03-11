@@ -3,7 +3,7 @@ module-works.pt40.pb80
     item-h2(content='{h2}').mb32
     div.wrap-works.f.flex-wrap.flex-row.flex-between
       item-work(each='{item in works}', content='{item}')
-      item-work(each='{item in empty}', content='{item}').hide
+      //item-work(each='{item in empty}', content='{item}').hide
 
   style(scoped, type='less').
     :scope {
@@ -30,93 +30,117 @@ module-works.pt40.pb80
       label: '展示作品 (順次公開)',
       color: 'color:#2A45F4; border-color:#2A45F4;',
     };
-  
+    this.works = topContents;
+    
+    /*
     this.works = [
       {
         label: '石原作品',
         src: './img/works/work-dummy@2x.png',
+        href: '/#works/test',
       },
       {
         label: '石原作品',
         src: './img/works/work-dummy@2x.png',
+        href: '/#works/test',
       },
       {
         label: '石原作品',
         src: './img/works/work-dummy@2x.png',
+        href: '/#works/test',
       },
       {
         label: '石原作品',
         src: './img/works/work-dummy@2x.png',
+        href: '/#works/test',
       },
       {
         label: '石原作品',
         src: './img/works/work-dummy@2x.png',
+        href: '/#works/test',
       },
       {
         label: '石原作品',
         src: './img/works/work-dummy@2x.png',
+        href: '/#works/test',
       },
       {
         label: '石原作品',
         src: './img/works/work-dummy@2x.png',
+        href: '/#works/test',
       },
       {
         label: '石原作品',
         src: './img/works/work-dummy@2x.png',
+        href: '/#works/test',
       },
       {
         label: '石原作品',
         src: './img/works/work-dummy@2x.png',
+        href: '/#works/test',
       },
       {
         label: '石原作品',
         src: './img/works/work-dummy@2x.png',
+        href: '/#works/test',
       },
       {
         label: '石原作品',
         src: './img/works/work-dummy@2x.png',
+        href: '/#works/test',
       },
       {
         label: '石原作品',
         src: './img/works/work-dummy@2x.png',
+        href: '/#works/test',
       },
       {
         label: '石原作品',
         src: './img/works/work-dummy@2x.png',
+        href: '/#works/test',
       },
       {
         label: '石原作品',
         src: './img/works/work-dummy@2x.png',
+        href: '/#works/test',
       },
       {
         label: '石原作品',
         src: './img/works/work-dummy@2x.png',
+        href: '/#works/test',
       },
       {
         label: '石原作品',
         src: './img/works/work-dummy@2x.png',
+        href: '/#works/test',
       },
       {
         label: '石原作品',
         src: './img/works/work-dummy@2x.png',
+        href: '/#works/test',
       },
       {
         label: '石原作品',
         src: './img/works/work-dummy@2x.png',
+        href: '/#works/test',
       },
       {
         label: '石原作品',
         src: './img/works/work-dummy@2x.png',
+        href: '/#works/test',
       },
       {
         label: '石原作品',
         src: './img/works/work-dummy@2x.png',
+        href: '/#works/test',
       },
     ];
-  
+    */
+      
     this.empty = [
       {
         label: 'dummy flex',
         src: '',
       },
     ]
+

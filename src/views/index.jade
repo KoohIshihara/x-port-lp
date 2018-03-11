@@ -14,10 +14,10 @@ block content
       if(content==undefined){
         riot.mount('content', 'page-top', {content: 'content'});
       }
-      
-      riot.mount('content', 'page-work', {content: content});
+      var mountContent = workContents[tagName];
+      riot.mount('content', 'page-work', {content: mountContent});
       riot.update();
-    })
+    });
 
     riot.route(function(tagName) {
 

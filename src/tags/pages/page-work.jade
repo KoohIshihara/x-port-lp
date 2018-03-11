@@ -1,6 +1,6 @@
 page-work.pt14.pb40
   module-header-work
-  module-content-work
+  module-content-work(content='{ this.content }')
   
 
   style(scoped, type='less').
@@ -21,6 +21,9 @@ page-work.pt14.pb40
     }
 
   script.
+
+    this.content = opts.__proto__.content;
+
     this.on('updated', function(){
       GLOB.scrollPoint = 'module-works';
 

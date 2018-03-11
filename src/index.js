@@ -13,7 +13,7 @@ app.set('view engine', 'jade');
 
 app.use(logger('dev'));
 
-app.set('port', process.env.PORT || 4000);
+app.set('port', process.env.PORT || 4001);
 
 app.use(require('less-middleware')(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../public')));

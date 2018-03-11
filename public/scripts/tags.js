@@ -56,7 +56,7 @@ riot.tag2('item-map', '<div class="gmap"> <iframe src="./map.html" width="600" h
 riot.tag2('item-time-event', '<div class="wrap-item f"> <div class="wrap-circle"> <div class="circle"></div> </div> <div class="wrap-info"> <p class="mt8">{opts.content.time}</p> <h3 class="mt4">{opts.content.label}</h3> </div> </div>', 'item-time-event,[data-is="item-time-event"]{display:block} item-time-event .wrap-item .wrap-circle .circle,[data-is="item-time-event"] .wrap-item .wrap-circle .circle{position:relative;top:1.6px;left:-14.5px;display:block;width:26px;height:26px;background:#FFF;outline:solid 10px #2a45f4;border:solid 4px rgba(42,69,244,0.5)} item-time-event .wrap-item .wrap-info p,[data-is="item-time-event"] .wrap-item .wrap-info p{font-size:16px;font-weight:bold;color:#FFF;opacity:.85} item-time-event .wrap-item .wrap-info h3,[data-is="item-time-event"] .wrap-item .wrap-info h3{font-size:28px;color:#FFF}@media only screen and (max-width:600px){ item-time-event .wrap-item .wrap-circle .circle,[data-is="item-time-event"] .wrap-item .wrap-circle .circle{position:relative;top:1.6px;left:-8px;display:block;width:14px;height:14px;background:#FFF;outline:solid 10px #2a45f4;border:solid 2px rgba(42,69,244,0.4)} item-time-event .wrap-item .wrap-info p,[data-is="item-time-event"] .wrap-item .wrap-info p{margin-top:0} item-time-event .wrap-item .wrap-info h3,[data-is="item-time-event"] .wrap-item .wrap-info h3{font-size:20px}}', '', function(opts) {
 });
 
-riot.tag2('item-work', '<a class="wrap-item box-1x1" href="#works/test" riot-style="background-image: url(&quot;{opts.content.src}&quot;);"></a>', 'item-work,[data-is="item-work"]{display:block;width:19.8%} item-work .wrap-item,[data-is="item-work"] .wrap-item{display:block;position:relative;width:100%;height:auto;overflow:hidden;background-repeat:no-repeat;background-size:cover;background-position:center} item-work .box-1x1:before,[data-is="item-work"] .box-1x1:before{content:"";display:block;padding-top:100%}@media only screen and (max-width:600px){ item-work,[data-is="item-work"]{width:33%}}', 'class="mb2"', function(opts) {
+riot.tag2('item-work', '<a class="wrap-item box-1x1" href="{opts.content.href}" riot-style="background-image: url(&quot;{opts.content.src}&quot;);"></a>', 'item-work,[data-is="item-work"]{display:block;width:19.8%} item-work .wrap-item,[data-is="item-work"] .wrap-item{display:block;position:relative;width:100%;height:auto;overflow:hidden;background-repeat:no-repeat;background-size:cover;background-position:center} item-work .box-1x1:before,[data-is="item-work"] .box-1x1:before{content:"";display:block;padding-top:100%}@media only screen and (max-width:600px){ item-work,[data-is="item-work"]{width:33%}}', 'class="mb2"', function(opts) {
 });
 
 riot.tag2('module-about', '<div class="wrap-module"> <item-h2 class="mb32" content="{h2}"></item-h2> <p class="mb32"> 「X-port」は慶應義塾大学SFC 学生有志による合同展示会です。慶應義塾大学SFC X-Designプログラムに所属する学生を中心に、 計20点の研究成果物が展示されます。 本年度のテーマである「X-port」には、2つの意味が込められています。 </p> <wrap-list> <item-list each="{item in lists}" content="{item}"></item-list> </wrap-list> </div>', 'module-about,[data-is="module-about"]{display:block;background:#2B45F4} module-about .wrap-module,[data-is="module-about"] .wrap-module{width:92%;max-width:948px;margin:0 auto} module-about .wrap-module p,[data-is="module-about"] .wrap-module p{font-size:20px;color:#fff;letter-spacing:1px;line-height:1.6;font-weight:bold;opacity:.85}@media only screen and (max-width:600px){ module-about .wrap-module p,[data-is="module-about"] .wrap-module p{font-size:15px}}', 'class="pt40 pb80"', function(opts) {
@@ -71,7 +71,9 @@ riot.tag2('module-about', '<div class="wrap-module"> <item-h2 class="mb32" conte
     ];
 });
 
-riot.tag2('module-content-work', '<div class="wrap-module"> <h2>作品名</h2> <div class="wrap-explain mt20"> <p>いろはにほへと、ここに説明文が入ります。ここに表示する文章は当日会場のキャプションに書く内容と同じがでいいかなと考えています。200文字程度が丁度いいかなって考えてる。どうかな？ここらへんで大体100文字。少し長いかも...？</p> </div> <div class="wrap-prof mt12"> <p>石原航</p> <p>脇田玲研究室</p> </div> <div class="wrap-img mt40"><img src="./img/works/detail/aura/1.png"><img src="./img/works/detail/aura/1.png"><img src="./img/works/detail/aura/1.png"><img src="./img/works/detail/aura/1.png"></div> </div>', 'module-content-work,[data-is="module-content-work"]{display:block;background:#2B45F4} module-content-work .wrap-module,[data-is="module-content-work"] .wrap-module{width:92%;max-width:948px;margin:0 auto} module-content-work .wrap-module h2,[data-is="module-content-work"] .wrap-module h2{color:#fff} module-content-work .wrap-module .wrap-explain p,[data-is="module-content-work"] .wrap-module .wrap-explain p{color:#FFF;font-weight:lighter} module-content-work .wrap-module .wrap-prof p,[data-is="module-content-work"] .wrap-module .wrap-prof p{color:#FFF;text-align:right;font-weight:lighter}', '', function(opts) {
+riot.tag2('module-content-work', '<div class="wrap-module"> <h2>{opts.content.label}</h2> <div class="wrap-explain mt20"> <p>{opts.content.explain}</p> </div> <div class="wrap-prof mt12"> <p>{opts.content.name}</p> <p>{opts.content.belonging}</p> </div> <div class="wrap-img mt40"><img each="{item in imgs}" riot-src="{item}"></div> </div>', 'module-content-work,[data-is="module-content-work"]{display:block;background:#2B45F4} module-content-work .wrap-module,[data-is="module-content-work"] .wrap-module{width:92%;max-width:948px;margin:0 auto} module-content-work .wrap-module h2,[data-is="module-content-work"] .wrap-module h2{color:#fff} module-content-work .wrap-module .wrap-explain p,[data-is="module-content-work"] .wrap-module .wrap-explain p{color:#FFF;font-weight:lighter} module-content-work .wrap-module .wrap-prof p,[data-is="module-content-work"] .wrap-module .wrap-prof p{color:#FFF;text-align:right;font-weight:lighter}', '', function(opts) {
+    this.imgs = opts.content.imgs;
+
 });
 
 riot.tag2('module-detail', '<div class="wrap-module py20"> <item-h2 class="mb24" content="{h2}"></item-h2> <div class="wrap-content"> <item-label-detail content="日時"></item-label-detail> <p>2018.03.24(sat) – 25(sun)</p> <p>11:00～18:00</p> </div> <div class="wrap-content"> <item-label-detail content="会場"></item-label-detail> <p>YCC ヨコハマ創造都市センター</p> <p>(3Fイベントスペース)</p> <p><a target="_blank" href="https://goo.gl/maps/3jjwRbB8C5o">〒231-8315 神奈川県横浜市中区本町6丁目50-1</a></p> <p>みなとみらい線「馬車道駅」1B出口から直結</p> <p>JR・市営地下鉄「桜木町駅」より徒歩5分</p> <item-map class="my24"></item-map> </div> <div class="wrap-content"> <item-label-detail content="入場料"></item-label-detail> <p>無料</p> </div> <div class="wrap-content"> <item-label-detail content="お問い合わせ"></item-label-detail> <p>Twitter: <a target="_blank" href="https://twitter.com/xport2018">@xport2018</a></p> <p>Facebook: <a target="_blank" href="https://www.facebook.com/XportSFC">X-portSFC</a></p> </div> <div class="wrap-content"> <item-label-detail content="協賛企業"></item-label-detail> <p class="mb24">この展示会は、モノづくりに励む学生たちを応援する様々な企業よりご支援頂いております。</p> <div class="wrap-cooperations f flex-wrap flex-row flex-center mt40"> <item-cooperation each="{item in cooperations}" content="{item}"></item-cooperation> </div> </div> <div class="wrap-content"></div> </div>', 'module-detail,[data-is="module-detail"]{display:block;background:#fff} module-detail .wrap-module,[data-is="module-detail"] .wrap-module{width:92%;max-width:948px;margin:0 auto} module-detail .wrap-module .wrap-content,[data-is="module-detail"] .wrap-module .wrap-content{margin-bottom:32px} module-detail .wrap-module .wrap-content p,[data-is="module-detail"] .wrap-module .wrap-content p{color:#2A45F4;font-size:20px;letter-spacing:1px;line-height:1.8} module-detail .wrap-module .wrap-content a,[data-is="module-detail"] .wrap-module .wrap-content a{font-size:20px;color:#2A45F4;font-weight:bold;border-bottom:solid 2px;line-height:1.8} module-detail .wrap-module .wrap-content .howto,[data-is="module-detail"] .wrap-module .wrap-content .howto{font-size:16px}@media only screen and (max-width:600px){ module-detail .wrap-module .wrap-content p,[data-is="module-detail"] .wrap-module .wrap-content p{font-size:15px} module-detail .wrap-module .wrap-content a,[data-is="module-detail"] .wrap-module .wrap-content a{font-size:15px} module-detail .wrap-module .wrap-content .howto,[data-is="module-detail"] .wrap-module .wrap-content .howto{font-size:13px}}', 'class="py40"', function(opts) {
@@ -140,94 +142,12 @@ riot.tag2('module-header-work', '<div class="wrap-module"> <item-back></item-bac
 riot.tag2('module-top', '<div class="wrap-module"> <div class="bg-cover-top"></div> <div class="wrap-labels"> <item-label-top content="慶應義塾大学SFC"></item-label-top> <item-label-top class="mt8" content="学生有志 合同展示会 2018"></item-label-top> <h1 class="mt10 mb20">X-port</h1> <item-label-top content="2018.03.24th(sat) – 25th(sun)"></item-label-top> <item-label-top class="mt12" content="YCC ヨコハマ創造都市センター"></item-label-top> </div> </div>', 'module-top,[data-is="module-top"]{display:block} module-top .wrap-module,[data-is="module-top"] .wrap-module{position:relative;z-index:0;width:100%;height:135vh;background-image:url("img/hiro-pc@2x.png");background-repeat:no-repeat;background-size:cover;background-position:bottom} module-top .wrap-module .bg-cover-top,[data-is="module-top"] .wrap-module .bg-cover-top{position:absolute;z-index:1;width:100%;height:135vh;background:#FFF;padding-top:-100px} module-top .wrap-module .wrap-labels,[data-is="module-top"] .wrap-module .wrap-labels{position:relative;z-index:2;width:92%;margin:0 auto;padding-top:5vh} module-top .wrap-module .wrap-labels h1,[data-is="module-top"] .wrap-module .wrap-labels h1{font-size:15vw;letter-spacing:2px;color:#2B45F4}@media only screen and (max-width:600px){ module-top .wrap-module,[data-is="module-top"] .wrap-module{background-image:url("img/sp/hiro-sp@2x.png")} module-top .wrap-module .wrap-labels,[data-is="module-top"] .wrap-module .wrap-labels{padding-top:10vh} module-top .wrap-module .wrap-labels h1,[data-is="module-top"] .wrap-module .wrap-labels h1{font-size:25vw}}@media only screen and (min-width:960px){ module-top .wrap-module .wrap-labels h1,[data-is="module-top"] .wrap-module .wrap-labels h1{font-size:144px} module-top .wrap-module .wrap-labels item-label-top,[data-is="module-top"] .wrap-module .wrap-labels item-label-top{font-size:43.2px}}', '', function(opts) {
 });
 
-riot.tag2('module-works', '<div class="wrap-module"> <item-h2 class="mb32" content="{h2}"></item-h2> <div class="wrap-works f flex-wrap flex-row flex-between"> <item-work each="{item in works}" content="{item}"></item-work> <item-work class="hide" each="{item in empty}" content="{item}"></item-work> </div> </div>', 'module-works,[data-is="module-works"]{display:block;background:#fff} module-works .wrap-module,[data-is="module-works"] .wrap-module{width:92%;max-width:948px;margin:0 auto} module-works .wrap-module p,[data-is="module-works"] .wrap-module p{color:#fff;letter-spacing:1px}@media only screen and (max-width:600px){ module-works .hide,[data-is="module-works"] .hide{display:none}}', 'class="pt40 pb80"', function(opts) {
+riot.tag2('module-works', '<div class="wrap-module"> <item-h2 class="mb32" content="{h2}"></item-h2> <div class="wrap-works f flex-wrap flex-row flex-between"> <item-work each="{item in works}" content="{item}"></item-work> </div> </div>', 'module-works,[data-is="module-works"]{display:block;background:#fff} module-works .wrap-module,[data-is="module-works"] .wrap-module{width:92%;max-width:948px;margin:0 auto} module-works .wrap-module p,[data-is="module-works"] .wrap-module p{color:#fff;letter-spacing:1px}@media only screen and (max-width:600px){ module-works .hide,[data-is="module-works"] .hide{display:none}}', 'class="pt40 pb80"', function(opts) {
     this.h2 = {
       label: '展示作品 (順次公開)',
       color: 'color:#2A45F4; border-color:#2A45F4;',
     };
-
-    this.works = [
-      {
-        label: '石原作品',
-        src: './img/works/work-dummy@2x.png',
-      },
-      {
-        label: '石原作品',
-        src: './img/works/work-dummy@2x.png',
-      },
-      {
-        label: '石原作品',
-        src: './img/works/work-dummy@2x.png',
-      },
-      {
-        label: '石原作品',
-        src: './img/works/work-dummy@2x.png',
-      },
-      {
-        label: '石原作品',
-        src: './img/works/work-dummy@2x.png',
-      },
-      {
-        label: '石原作品',
-        src: './img/works/work-dummy@2x.png',
-      },
-      {
-        label: '石原作品',
-        src: './img/works/work-dummy@2x.png',
-      },
-      {
-        label: '石原作品',
-        src: './img/works/work-dummy@2x.png',
-      },
-      {
-        label: '石原作品',
-        src: './img/works/work-dummy@2x.png',
-      },
-      {
-        label: '石原作品',
-        src: './img/works/work-dummy@2x.png',
-      },
-      {
-        label: '石原作品',
-        src: './img/works/work-dummy@2x.png',
-      },
-      {
-        label: '石原作品',
-        src: './img/works/work-dummy@2x.png',
-      },
-      {
-        label: '石原作品',
-        src: './img/works/work-dummy@2x.png',
-      },
-      {
-        label: '石原作品',
-        src: './img/works/work-dummy@2x.png',
-      },
-      {
-        label: '石原作品',
-        src: './img/works/work-dummy@2x.png',
-      },
-      {
-        label: '石原作品',
-        src: './img/works/work-dummy@2x.png',
-      },
-      {
-        label: '石原作品',
-        src: './img/works/work-dummy@2x.png',
-      },
-      {
-        label: '石原作品',
-        src: './img/works/work-dummy@2x.png',
-      },
-      {
-        label: '石原作品',
-        src: './img/works/work-dummy@2x.png',
-      },
-      {
-        label: '石原作品',
-        src: './img/works/work-dummy@2x.png',
-      },
-    ];
+    this.works = topContents;
 
     this.empty = [
       {
@@ -261,7 +181,9 @@ riot.tag2('page-top', '<module-top></module-top> <module-about></module-about> <
     });
 });
 
-riot.tag2('page-work', '<module-header-work></module-header-work> <module-content-work></module-content-work>', 'page-work,[data-is="page-work"]{overflow:scroll;background:#2B45F4;position:fixed;width:100%;height:100%;min-height:100vh;top:0;left:0;display:block} page-work ::selection,[data-is="page-work"] ::selection{color:#FFFF00;background:#2B45F4}', 'class="pt14 pb40"', function(opts) {
+riot.tag2('page-work', '<module-header-work></module-header-work> <module-content-work content="{this.content}"></module-content-work>', 'page-work,[data-is="page-work"]{overflow:scroll;background:#2B45F4;position:fixed;width:100%;height:100%;min-height:100vh;top:0;left:0;display:block} page-work ::selection,[data-is="page-work"] ::selection{color:#FFFF00;background:#2B45F4}', 'class="pt14 pb40"', function(opts) {
+    this.content = opts.__proto__.content;
+
     this.on('updated', function(){
       GLOB.scrollPoint = 'module-works';
 
