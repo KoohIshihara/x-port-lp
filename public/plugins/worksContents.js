@@ -110,7 +110,7 @@ var workContents = {
     name: '花形 槙',
     belonging: '筧康明研究室',
     imgs: [
-          './img/works/detail/hanagata/thumbnail.jpg',
+          './img/works/detail/hanagata/1.jpg',
           ],
   },
   yoshioka: {
@@ -119,7 +119,7 @@ var workContents = {
     name: '吉岡 純希',
     belonging: '田中浩也研究室',
     imgs: [
-          './img/works/detail/yoshioka/thumbnail.jpg',
+          './img/works/detail/yoshioka/1.jpg',
           ],
   },
   kera: {
@@ -183,12 +183,12 @@ var workContents = {
           ],
   },
   kojima: {
-    label: 'Kazuki Kojima',
+    label: 'URBAN WEAVER',
     explain: '神奈川県川崎市にサッカー専用スタジアムを設計した。形式化した既存のスタジアムの構成に囚われず、観客のふるまいやサッカーというスポーツの特性を踏まえて計画を進めた。内部のひとつながりの動線はホームとアウェイを仕切りつつ、全体としての一体感を生み出し、アクセスの動線はスムーズな人の流れを生み出し、スタジアムと地域をつないでいく。傾いた観客席をケーブルでつないでバランスをとる構造で軽やかな外観を実現した。',
     name: '小嶋 一耀',
     belonging: '鳴川肇研究室',
     imgs: [
-          './img/works/detail/kojima/thumbnail.jpg',
+          './img/works/detail/kojima/1.jpg',
           ],
   },
   kobayashi: {
@@ -210,7 +210,7 @@ var workContents = {
     name: '森田 健人',
     belonging: '筧康明研究室',
     imgs: [
-          './img/works/detail/morita/thumbnail.png',
+          './img/works/detail/morita/1.png',
           ],
   },
   ishihara: {
@@ -228,7 +228,7 @@ var workContents = {
     name: '川崎 和也',
     belonging: '水野大二郎研究室',
     imgs: [
-          './img/works/detail/kawasaki/thumbnail.jpg',
+          './img/works/detail/kawasaki/1.jpg',
           ],
   },
   // okawa: {
@@ -266,7 +266,7 @@ var workContents = {
     name: '平井 誠之',
     belonging: '筧康明 研究室',
     imgs: [
-          './img/works/detail/hirai/thumbnail.jpg',
+          './img/works/detail/hirai/1.jpg',
           ],
   },
   honma: {
@@ -275,7 +275,7 @@ var workContents = {
     name: '本間 万里',
     belonging: '鳴川肇研究室',
     imgs: [
-          './img/works/detail/honma/thumbnail.jpg',
+          './img/works/detail/honma/1.jpg',
           ],
   },
   kihara: {
