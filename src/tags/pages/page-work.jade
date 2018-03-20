@@ -1,12 +1,13 @@
-page-work.pt14.pb40
+page-work.pb40
   module-header-work
   module-content-work(content='{ this.content }')
+  module-footer
   
 
   style(scoped, type='less').
     :scope {
       overflow: scroll;
-      background: #2B45F4;
+      //- background: #2B45F4;
       position: fixed;
       width: 100%;
       height: 100%;
@@ -17,6 +18,16 @@ page-work.pt14.pb40
       ::selection {
         color: #FFFF00;
         background: #2B45F4;
+      }
+      module-header-work {
+        background: #2B45F4;
+      }
+      module-content-work {
+        background: #2B45F4;
+      }
+      module-footer {
+        display: block;
+        position: absolute;
       }
     }
 

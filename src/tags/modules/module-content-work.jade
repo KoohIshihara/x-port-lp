@@ -1,5 +1,5 @@
-module-content-work
-  div.wrap-module
+module-content-work.pb80
+  div.wrap-module.pb80
     h2 {opts.content.label}
     div.wrap-explain.mt20
       p {opts.content.explain}
@@ -7,7 +7,7 @@ module-content-work
       p {opts.content.name}
       p {opts.content.belonging}
     div.wrap-img.mt40
-      img(each='{item in imgs}', src='{item}')
+      img(each='{item in imgs}', src='{item}').mb40
       
   style(scoped, type='less').
     :scope {
@@ -36,7 +36,13 @@ module-content-work
       }
       @media only screen and (max-width : 600px) {
         .wrap-module {
+          padding-bottom: 0;
           width: 92%;
+          .wrap-img {
+            img {
+              margin-bottom: 20px;
+            }
+          }
         }
       }
     }
