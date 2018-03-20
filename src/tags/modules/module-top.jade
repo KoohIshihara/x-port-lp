@@ -71,5 +71,8 @@ module-top
 
   script.
     this.on('mount', function(){
-      fireAnim();
+      $('#loadingWrapper').delay(800).fadeToggle(800);
+      setTimeout(function(){
+        fireAnim();
+      }, 800);
     });
