@@ -1,0 +1,49 @@
+module-loading#loadingWrapper
+  div.wrap-module.f.fh
+    p.text Now Loading
+    div.rect
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      background: #FFF;
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 100;
+      .wrap-module {
+        height: 100%;
+        position: relative;
+        opacity: 0.5;
+        .text {
+          position: absolute;
+          color: #2A45F4;
+        }
+        .rect {
+          position: absolute;
+          display: block;
+          width: 160px;
+          height: 160px;
+          border: solid #2A45F4;
+          border-radius: 8px;
+          animation-name: loadingAnim;
+          animation-duration: 1.2s;
+          /*animation-timing-function: ease-in;*/
+          animation-iteration-count: infinite;
+        }
+        @keyframes loadingAnim {
+          from {
+            
+            transform: rotate(0deg);
+          }
+          to {
+            
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+  
+  script.

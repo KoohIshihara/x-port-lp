@@ -66,7 +66,7 @@ var topContents = [
   },
   {
     label: 'Ko Ishihara',
-    src: './img/works/detail/ishihara/thumbnail.png',
+    src: './img/works/detail/ishihara/thumbnail2.jpg',
     href: '/#works/ishihara',
   },
   {
