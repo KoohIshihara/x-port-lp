@@ -3,7 +3,9 @@ module-works.pt40.pb80
     item-h2(content='{h2}').mb32
     div.wrap-works.f.flex-wrap.flex-row.flex-between
       item-work(each='{item in works}', content='{item}')
-      item-work(each='{item in empty}', content='{item}', style='background: rgba(42, 69, 244);').hide
+      div.box-dummy
+        div.dummy-content
+      //item-work(each='{item in empty}', content='{item}', style='background: rgba(42, 69, 244, 0.2);').hide
 
   style(scoped, type='less').
     :scope {
@@ -18,8 +20,28 @@ module-works.pt40.pb80
           letter-spacing: 1px;
         }
         .wrap-works {
+          .box-dummy {
+            display: block;
+            width: 19.8%;
+            background: #fff;
+            .dummy-content {
+              display: block;
+              position: relative;
+              width: 100%;
+              height: auto;
+              overflow: hidden;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
+            }
+            .dummy-content:before {
+              content: "";
+              display: block;
+              padding-top: 100%;
+            }
+          }
           .hide {
-            background: #ffffff
+            background: #ffffff;
           }
         }
       }
